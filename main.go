@@ -1,33 +1,22 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
+	"time"
 )
 
+func printPattern(n int) int {
+	var sum int
+	for i := 1; i <= n; i++ {
+		fmt.Println(i)
+		sum += i
+	}
+	return sum
+}
+
 func main() {
-	var id int
-	var amount float32
-	var name string
+	start := time.Now()
+	fmt.Println(printPattern(10000000))
+	fmt.Println(time.Since(start))
 
-	scanner := bufio.NewScanner(os.Stdin)
-
-	fmt.Print("Enter the id: ")
-	scanner.Scan()
-	id, _ = strconv.Atoi(scanner.Text())
-
-	fmt.Print("Enter the name: ")
-	scanner.Scan()
-	name = scanner.Text()
-
-	fmt.Print("Enter the amount: ")
-	scanner.Scan()
-	amountFloat, _ := strconv.ParseFloat(scanner.Text(), 32)
-	amount = float32(amountFloat)
-
-	fmt.Println("Id:", id)
-	fmt.Println("Name:", name)
-	fmt.Println("Amount:", amount)
 }
