@@ -16,7 +16,7 @@ func printPattern(n int) int {
 
 func main() {
 	start := time.Now()
-	fmt.Println(printPattern(10000000))
+	fmt.Println(printPattern(100000))
 	fmt.Println(time.Since(start))
 
 }
