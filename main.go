@@ -1,22 +1,18 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
-func printPattern(n int) int {
-	var sum int
-	for i := 1; i <= n; i++ {
-		fmt.Println(i)
-		sum += i
-	}
-	return sum
+func test() {
+	fmt.Println("Test function")
+	fmt.Println("Sum:", add(30, 4))
 }
 
 func main() {
-	start := time.Now()
-	fmt.Println(printPattern(10000000))
-	fmt.Println(time.Since(start))
+	fmt.Println("Hello, World!")
+	test()
+	fmt.Println("Sum:", add(3, 4))
+}
+func add(a, b int) int {
 
+	return a + b
 }
